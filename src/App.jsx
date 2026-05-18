@@ -245,7 +245,7 @@ export default function MarketteEnterprisesWebsite() {
             Connect with Markette Enterprises
           </h2>
 
-          <p className="mt-6 text-lg text-slate-700 leading-relaxed max-w-2xl mx-auto">
+          <p className="mt-6 text-lg text-slate-700 leading-relaxed max-w-full mx-auto">
             For partnership opportunities, business inquiries, or future collaborations, reach out to our team.
           </p>
 
@@ -257,12 +257,7 @@ export default function MarketteEnterprisesWebsite() {
               info@markette.net
             </a>
 
-            <a
-              href="tel:+10000000000"
-              className="rounded-2xl border border-teal-200 px-8 py-4 font-semibold hover:bg-teal-50 transition-colors"
-            >
-              (000) 000-0000
-            </a>
+
           </div>
         </div>
       </section>
@@ -278,7 +273,7 @@ export default function MarketteEnterprisesWebsite() {
           </div>
 
           <p className="text-sm text-teal-600">
-            © 2026 Markette Enterprises. All rights reserved.
+            © 2026 Markette Enterprises Inc. All rights reserved.
           </p>
         </div>
       </footer>
