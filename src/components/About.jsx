@@ -29,11 +29,11 @@ export default function About() {
               long-term perspective to every venture we undertake.
             </p>
             {/* Stats row */}
-            <div className="flex gap-3 mt-5">
+            <div className="grid grid-cols-3 gap-2 mt-5">
               {stats.map(({ strong, sub }) => (
-                <div key={strong} className="flex-1 bg-white/[0.12] rounded-xl px-3 py-3 text-center">
-                  <strong className="block font-serif-display text-2xl text-white">{strong}</strong>
-                  <span className="text-[0.75rem] text-white/65">{sub}</span>
+                <div key={strong} className="bg-white/[0.12] rounded-xl px-2 py-3 text-center min-w-0">
+                  <strong className="block font-serif-display text-lg sm:text-2xl text-white leading-tight">{strong}</strong>
+                  <span className="text-[0.7rem] sm:text-[0.75rem] text-white/65">{sub}</span>
                 </div>
               ))}
             </div>
