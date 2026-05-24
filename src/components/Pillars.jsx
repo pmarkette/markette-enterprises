@@ -2,7 +2,7 @@ const pillars = [
   {
     icon: '🏗️',
     title: 'Business Development',
-    body: 'We identify, evaluate, and develop business opportunities with care — assessing each venture through the lens of long-term viability, operational fit, and community value.',
+    body: 'We identify, evaluate, and develop business opportunities with care, assessing each venture through the lens of long-term viability, operational fit, and community value.',
   },
   {
     icon: '📋',
@@ -12,12 +12,12 @@ const pillars = [
   {
     icon: '🤝',
     title: 'Relationship-Driven',
-    body: 'Our customers, partners, and community are central to how we operate. We prioritize long-term trust over short-term wins — building a reputation one interaction at a time.',
+    body: 'Our customers, partners, and community are central to how we operate. We prioritize long-term trust over short-term wins, building a reputation one interaction at a time.',
   },
   {
     icon: '✅',
     title: 'Standards & Compliance',
-    body: 'Operating responsibly is foundational, not optional. We hold every business we run to the highest applicable standards — legal, ethical, and operational.',
+    body: 'Operating responsibly is foundational, not optional. We hold every business we run to the highest applicable standards, legal, ethical, and operational.',
   },
   {
     icon: '📈',
@@ -27,7 +27,7 @@ const pillars = [
   {
     icon: '🌱',
     title: 'Community Commitment',
-    body: 'Every business we operate is embedded in a community. We hire locally, invest thoughtfully, and measure success not just in revenue — but in the impact we create around us.',
+    body: 'Every business we operate is embedded in a community. We hire locally, invest thoughtfully, and measure success not just in revenue, but in the impact we create around us.',
   },
 ]
 

@@ -32,7 +32,7 @@ export default function Hero() {
 
         {/* Sub */}
         <p className="animate-fade-up-3 text-[1.125rem] text-[#617870] max-w-[520px] leading-[1.7] mb-10 font-light">
-          Markette Enterprises develops and operates businesses with purpose — combining disciplined
+          Markette Enterprises develops and operates businesses with purpose, combining disciplined
           management, a long-term vision, and an unwavering commitment to doing things the right way.
         </p>
 

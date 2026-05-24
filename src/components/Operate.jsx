@@ -2,12 +2,12 @@ const points = [
   {
     num: '01',
     title: 'Start with What Works',
-    body: 'Our current focus is the disciplined operation of an established retail business. We treat it as both a revenue-generating enterprise and a proving ground — developing the management practices, financial rigor, and team culture that will carry us into future ventures.',
+    body: 'Our current focus is the disciplined operation of an established retail business. We treat it as both a revenue-generating enterprise and a proving ground, developing the management practices, financial rigor, and team culture that will carry us into future ventures.',
   },
   {
     num: '02',
     title: 'Build for the Long Term',
-    body: 'Markette Enterprises is not a single-business company. Our structure, our mindset, and our planning are all oriented toward growth. We expect to develop or acquire additional businesses over time — in retail or beyond — guided by sound judgment and the right opportunities.',
+    body: 'Markette Enterprises is not a single-business company. Our structure, our mindset, and our planning are all oriented toward growth. We expect to develop or acquire additional businesses over time, in retail or beyond, guided by sound judgment and the right opportunities.',
   },
   {
     num: '03',
@@ -35,7 +35,7 @@ export default function Operate() {
         How We Build &amp; Operate
       </h2>
       <p className="text-[1.05rem] text-[#617870] max-w-[560px] leading-[1.75] font-light">
-        Markette Enterprises is in the business of building businesses — starting with a strong operational foundation and growing from there.
+        Markette Enterprises is in the business of building businesses, starting with a strong operational foundation and growing from there.
       </p>
 
       <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_1fr] gap-16 lg:gap-24 mt-14 items-start">

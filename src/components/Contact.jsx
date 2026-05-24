@@ -95,7 +95,7 @@ const handleSubmit = async () => {
             <p className="text-sm text-[#617870] font-light leading-[1.8]">
               Markette Enterprises is a privately held business development and operating company.
               For questions about our current business, partnership inquiries, or anything else,
-              please reach out directly — our team responds to every message personally.
+              please reach out directly. Our team responds to every message personally.
             </p>
           </div>
         </div>

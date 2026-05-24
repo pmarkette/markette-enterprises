@@ -25,7 +25,7 @@ export default function About() {
             <h3 className="font-serif-display text-2xl text-white mb-3">Who We Are</h3>
             <p className="text-white/80 font-light leading-relaxed text-sm">
               Markette Enterprises is a privately held business development and operating company.
-              We build, acquire, and manage businesses — bringing structure, discipline, and a
+              We build, acquire, and manage businesses, bringing structure, discipline, and a
               long-term perspective to every venture we undertake.
             </p>
             {/* Stats row */}
@@ -43,7 +43,7 @@ export default function About() {
           <div className="flex items-center gap-3 bg-teal-50 border border-teal-100 rounded-xl px-4 py-3 mt-3">
             <span className="w-2.5 h-2.5 rounded-full bg-teal-400 flex-shrink-0" />
             <span className="text-sm font-medium text-teal-800">
-              Currently operating an established retail business — with broader ventures on the horizon
+              Currently operating an established retail business, with broader ventures on the horizon
             </span>
           </div>
         </div>
@@ -59,13 +59,13 @@ export default function About() {
           <p className="text-[#617870] font-light leading-[1.8] mb-5">
             We established Markette Enterprises with a clear philosophy: that great businesses are
             built through disciplined management, sound decision-making, and an honest commitment
-            to the people they serve. Those principles guide us in everything we do today — and
+            to the people they serve. Those principles guide us in everything we do today, and
             will define every venture we pursue tomorrow.
           </p>
           <p className="text-[#617870] font-light leading-[1.8] mb-6">
             Currently, we operate an established retail business, and we are actively developing
             the foundation and expertise that will support future growth into new markets and
-            industries — wherever the right opportunities emerge.
+            industries, wherever the right opportunities emerge.
           </p>
           <ul className="flex flex-col gap-3 list-none">
             {values.map((v) => (
