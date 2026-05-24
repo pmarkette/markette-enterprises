@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import emailjs from '@emailjs/browser'
 
 const topics = [
   'General Inquiry',
@@ -7,6 +8,10 @@ const topics = [
   'Media & Press',
   'Other',
 ]
+
+const EMAILJS_SERVICE_ID  = import.meta.env.VITE_EMAILJS_SERVICE_ID
+const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID
+const EMAILJS_PUBLIC_KEY  = import.meta.env.VITE_EMAILJS_PUBLIC_KEY
 
 const inputClass =
   'w-full bg-[#f7f9f8] border border-[rgba(15,110,86,0.14)] rounded-md px-3.5 py-2.5 text-[0.9375rem] text-[#121c19] outline-none focus:border-teal-400 transition-colors font-sans'
@@ -17,16 +22,37 @@ const labelClass =
 export default function Contact() {
   const [form, setForm] = useState({ fname: '', lname: '', email: '', subject: '', message: '' })
   const [submitted, setSubmitted] = useState(false)
+  const [loading, setLoading]     = useState(false)
+  const [error, setError]         = useState('')
 
   const set = (key) => (e) => setForm((f) => ({ ...f, [key]: e.target.value }))
 
-  const handleSubmit = () => {
-    if (!form.fname || !form.email || !form.message) {
-      alert('Please fill in your name, email, and message before sending.')
-      return
-    }
-    setSubmitted(true)
+const handleSubmit = async () => {
+  if (!form.fname || !form.email || !form.message) {
+    setError('Please fill in your name, email, and message before sending.')
+    return
   }
+  setLoading(true)
+  setError('')
+  try {
+    await emailjs.send(
+      EMAILJS_SERVICE_ID,
+      EMAILJS_TEMPLATE_ID,
+      {
+        from_name:  `${form.fname} ${form.lname}`.trim(),
+        from_email: form.email,
+        subject:    form.subject || 'General Inquiry',
+        message:    form.message,
+      },
+      EMAILJS_PUBLIC_KEY
+    )
+    setSubmitted(true)
+  } catch (err) {
+    setError('Something went wrong. Please try again or email us directly at info@markette.net.')
+  } finally {
+    setLoading(false)
+  }
+}
 
   return (
     <section id="contact" className="bg-[#f7f9f8] px-[5vw] py-[100px]">
@@ -128,11 +154,16 @@ export default function Contact() {
                 />
               </div>
 
+              {error && (
+                  <p className="text-sm text-red-500 mb-3">{error}</p>
+              )}
+
               <button
                 onClick={handleSubmit}
-                className="w-full bg-teal-600 hover:bg-teal-800 text-white rounded-full py-3.5 font-semibold text-[0.9375rem] tracking-wide transition-colors cursor-pointer border-none"
+                disabled={loading}
+                className="w-full bg-teal-600 hover:bg-teal-800 disabled:opacity-60 disabled:cursor-not-allowed text-white rounded-full py-3.5 font-semibold text-[0.9375rem] tracking-wide transition-colors cursor-pointer border-none"
               >
-                Send Message
+                {loading ? 'Sending…' : 'Send Message'}
               </button>
             </>
           )}
